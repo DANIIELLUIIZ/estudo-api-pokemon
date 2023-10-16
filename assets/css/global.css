@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #e0e5ee;
+  background-color: #d4d4d4;
 }
 
 .content {
@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .pokemons {
   display: grid;
@@ -35,9 +35,10 @@ body {
   max-width: 180px;
   margin: 0.5rem;
   padding: 0.5rem;
-  background-color: #49d0b0;
+  /* background-color: #49d0b0; */
   color: #ffffff;
   border-radius: 0.5rem;
+  box-shadow: 2px 5px 10px rgba(10, 10, 10, 10);
 }
 .pokemon-info .info {
   display: flex;
@@ -50,11 +51,14 @@ body {
   padding: 0.3rem;
   border-radius: 0.3rem;
   font-weight: 600;
-  color: #fff;
-  background-color: #50cb08eb;
+  color: black;
+  opacity: 0.4;
 }
 .info > .name {
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
 }
 .pokemon {
   display: flex;
@@ -67,13 +71,14 @@ body {
   justify-content: center;
   gap: 0.3rem;
 }
-.types span {
+.type {
   font-size: 0.6rem;
-  padding: 0.4rem;
+  font-weight: 600;
+  padding: 0.3rem 0.5rem;
   border-radius: 0.3rem;
-  font-weight: 400;
   color: #fff;
-  background-color: #50cb08eb;
+  filter: brightness(1.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .pokemon img {
   max-width: 100px;
