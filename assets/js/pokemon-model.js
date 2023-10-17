@@ -3,4 +3,8 @@ class Pokemon {
   name
   type
   types = []
+  hp
+  atk
+  def
+  weight
 }
