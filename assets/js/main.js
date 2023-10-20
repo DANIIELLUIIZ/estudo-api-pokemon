@@ -1,9 +1,11 @@
 const loadMoreBtn = document.getElementById('loadMoreBtn')
 const pokemonList = document.getElementById('pokemonList')
 const moreInfoBtn = document.querySelector('.more-info-btn')
+const closeInfoBtn = document.querySelector(".close-info-btn")
+const pokeCard = document.querySelectorAll('.pokemons li')
 const curtain = document.querySelector('.curtain')
 
-let limit = 1
+let limit = 5
 let offset = 0
 
 loadPokemonItens(offset, limit)
@@ -37,6 +39,7 @@ function createPokemonList(pokemon) {
 <button class="more-info-btn">
 <i class="fa-solid fa-angle-down"></i>
 </button>
+
 <div class="status-container hide">
 <div class="status">
   <span class="status-name"> HP</span>
@@ -60,21 +63,13 @@ function createPokemonList(pokemon) {
 
 `
 }
-
 function loadPokemonItens(offset, limit) {
   pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
     const newHtml = pokemons.map(createPokemonList).join('')
     pokemonList.innerHTML = newHtml
   })
 }
-
-loadMoreBtn.addEventListener('click', () => {
-  limit += 5
-
-  loadPokemonItens(offset, limit)
-})
-
-document.addEventListener('click', e => {
+function openPokemonInfo(e) {
   let btn = e.target
   let close = btn.closest('div')
   let closeList = btn.closest('li')
@@ -82,6 +77,18 @@ document.addEventListener('click', e => {
   if (infoContainer.classList.contains('status-container')) {
     infoContainer.classList.toggle('hide')
     closeList.classList.toggle('absolute')
-    curtain.classList.toggle('curtain-abso')
+    curtain.classList.toggle('hide')
   }
+}
+console.log(pokeCard)
+loadMoreBtn.addEventListener('click', () => {
+  limit += limit
+
+  loadPokemonItens(offset, limit)
 })
+
+document.addEventListener('click', e => {
+  openPokemonInfo(e)
+})
+
+
