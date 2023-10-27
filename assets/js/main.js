@@ -83,7 +83,7 @@ function openPokemonInfo(e) {
 }
 
 loadMoreBtn.addEventListener('click', () => {
-  limit += limit
+  limit += 5
 
   loadPokemonItens(offset, limit)
 })
