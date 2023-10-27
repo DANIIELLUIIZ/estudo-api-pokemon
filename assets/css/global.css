@@ -23,8 +23,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   margin: 0;
-  padding: 3rem;
-  border-radius: 2rem;
+  padding: 0.5rem 0.3rem;
+  border-radius: 0.5rem;
   list-style: none;
   background-color: #ca0a0a79;
 }
