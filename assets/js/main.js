@@ -38,7 +38,6 @@ function createPokemonList(pokemon) {
 <div class="more-info">
 <button class="more-info-btn">
 <i class="fa-solid fa-angle-down"></i>
-<i class="fa-solid fa-angle-up hide"></i>
 </button>
 
 <div class="status-container hide">
