@@ -39,7 +39,6 @@ body {
   max-width: 180px;
   margin: 0.5rem;
   padding: 0.5rem;
-  /* background-color: #49d0b0; */
   color: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 2px 5px 10px rgba(10, 10, 10, 10);
@@ -47,7 +46,6 @@ body {
 
 .pokemon-info .info {
   display: flex;
-
   width: 100%;
   justify-content: space-between;
   padding-right: 0.3rem;
@@ -120,7 +118,7 @@ body {
   font-size: 0.6rem;
   font-weight: 500;
 }
-.more-info-btn, .close-info-btn {
+.more-info-btn {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -136,8 +134,11 @@ body {
 
   color: #fff;
 }
-.more-info-btn > i ,.close-info-btn>i {
+.more-info-btn > i {
   pointer-events: none;
+}
+.pokemon-info.absolute .more-info-btn{
+  transform: rotate(180deg);
 }
 #loadMoreBtn {
   cursor: pointer;

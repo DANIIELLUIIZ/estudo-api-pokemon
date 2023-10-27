@@ -1,7 +1,7 @@
 const loadMoreBtn = document.getElementById('loadMoreBtn')
 const pokemonList = document.getElementById('pokemonList')
 const moreInfoBtn = document.querySelector('.more-info-btn')
-const closeInfoBtn = document.querySelector(".close-info-btn")
+const closeInfoBtn = document.querySelector('.close-info-btn')
 const pokeCard = document.querySelectorAll('.pokemons li')
 const curtain = document.querySelector('.curtain')
 
@@ -38,6 +38,7 @@ function createPokemonList(pokemon) {
 <div class="more-info">
 <button class="more-info-btn">
 <i class="fa-solid fa-angle-down"></i>
+<i class="fa-solid fa-angle-up hide"></i>
 </button>
 
 <div class="status-container hide">
@@ -80,7 +81,7 @@ function openPokemonInfo(e) {
     curtain.classList.toggle('hide')
   }
 }
-console.log(pokeCard)
+
 loadMoreBtn.addEventListener('click', () => {
   limit += limit
 
@@ -90,5 +91,3 @@ loadMoreBtn.addEventListener('click', () => {
 document.addEventListener('click', e => {
   openPokemonInfo(e)
 })
-
-
